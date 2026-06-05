@@ -1,5 +1,5 @@
 All:
-	cc -o ./bin/tictactoe ./src/main.c && ./bin/tictactoe
+	cc -o ./bin/filer ./src/main.c && ./bin/filer
 
 win:
-	cc -o ./bin/tictactoe.exe ./src/main.c
+	cc -o ./bin/filer.exe ./src/main.c
