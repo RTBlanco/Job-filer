@@ -29,8 +29,9 @@ int main(void) {
 
 
   while ((entry = readdir(folder)) != NULL) {
-    if ()
-    printf("%s\n", entry->d_name);
+    if (strstr(entry->d_name, "Ronny_Toribio_Resume") != NULL) {
+      printf("%s\n", entry->d_name);
+    }
   }
 
 
