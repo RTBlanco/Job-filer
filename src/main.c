@@ -32,7 +32,7 @@ int main(void) {
     if (strstr(entry->d_name, "Ronny_Toribio_Resume") != NULL) {
 
       for(int i = 0; i < strlen(entry->d_name); i++) {
-        if (i >= 20)) {
+        if (i >= 20) {
           printf("%c", entry->d_name[i + 1]);
         }
       }
