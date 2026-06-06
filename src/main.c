@@ -30,7 +30,14 @@ int main(void) {
 
   while ((entry = readdir(folder)) != NULL) {
     if (strstr(entry->d_name, "Ronny_Toribio_Resume") != NULL) {
-      printf("%s\n", entry->d_name);
+
+      for(int i = 0; i < strlen(entry->d_name); i++) {
+        if (i >= 20)) {
+          printf("%c", entry->d_name[i + 1]);
+        }
+      }
+      printf("\n");
+      // printf("%s\n", entry->d_name);
     }
   }
 
