@@ -25,6 +25,8 @@ int main(void) {
   char path[] = "/Users/ronnytoribio/Desktop/resumes/";
   char downloads[] = "/Users/ronnytoribio/Downloads";
   char resume_name[] = "Ronny Toribio Resume.pdf";
+  char cover_letter_name[] = "Ronny Toribio CoverLetter.pdf";
+  
   folder = opendir(downloads);
   
   if (folder == NULL) {
