@@ -31,9 +31,11 @@ int main(void) {
   while ((entry = readdir(folder)) != NULL) {
     if (strstr(entry->d_name, "Ronny_Toribio_Resume") != NULL) {
 
-      for(int i = 0; i < strlen(entry->d_name); i++) {
-        if (i >= 20) {
-          printf("%c", entry->d_name[i + 1]);
+      int length_of_filename = strlen(entry->d_name);
+
+      for(int i = 0; i < length_of_filename; i++) {
+        if ((length_of_filename - 5 ) >= i & i >= 21) {
+          printf("%c", entry->d_name[i]);
         }
       }
       printf("\n");
