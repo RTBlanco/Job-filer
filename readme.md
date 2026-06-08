@@ -38,13 +38,49 @@ This project is mainly for learning and practicing C basics with real file-syste
 
 ## How To Run
 
-Build and run the program with:
+Install the CLI directly from GitHub with:
 
 ```sh
-make
+curl -fsSL https://raw.githubusercontent.com/RTBlanco/Job-filer/main/install.sh | sh
 ```
 
-The current paths are hardcoded in `src/main.c`, so the script is set up for my local machine.
+This builds the program from source and installs it to:
+
+```text
+~/.local/bin/filer
+```
+
+If `~/.local/bin` is not already on your `PATH`, add this line to your shell profile:
+
+```sh
+export PATH="$HOME/.local/bin:$PATH"
+```
+
+Then run:
+
+```sh
+filer
+```
+
+To install somewhere else, set `INSTALL_DIR`:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/RTBlanco/Job-filer/main/install.sh | INSTALL_DIR="$HOME/bin" sh
+```
+
+You can also install from a cloned copy of the repo:
+
+```sh
+sh install.sh
+```
+
+You need a C compiler available as `cc`. On macOS, you can install one with the Xcode Command Line Tools:
+
+```sh
+xcode-select --install
+```
+
+The current paths are hardcoded in `src/main.c`, so the program is still set up for my local machine.
 
 ## Current Limitations
 
