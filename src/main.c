@@ -55,6 +55,12 @@ int main(void) {
       printf("%s\n", path_to_folder);
       // printf("\n");
       // printf("%s\n", entry->d_name);
+
+      if (mkdir(path_to_folder, 0777) == 0) {
+        printf("Folder created successfully.\n");
+      } else {
+        printf("Failed to create folder.\n");
+      }
     }
   }
 
